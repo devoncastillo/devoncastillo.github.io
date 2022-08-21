@@ -6,6 +6,14 @@ code, pre {
   font-family: 'Courier New', Courier, monospace;
 }
 
+code {
+  color: #15141f;
+  background-color: #eae9ed;
+  border-radius: 0.125rem;
+  margin: 0 0.0625rem;
+  padding: 0 0.25rem;
+}
+
 pre {
   background-color: #1e1e1e;
   color: white;
