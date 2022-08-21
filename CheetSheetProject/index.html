@@ -20,13 +20,13 @@
       <p>The <code>font-family</code> property allows you to change the font of
       an element.</p>
   
-      <samp>
+      <div class="example">
         <pre>
           <span class="selector">h1</span> {
-            <span class="property">font-family</span>: <span class="value">Arial</span>;
+          <span class="property">font-family</span>: <span class="value">Arial</span>;
           }
         </pre>
-      </samp>
+      </div>
 
       <p>In the example above, the font family for all <code>&lt;h1&gt;</code>
       heading elements have been set to Arial.</p>
@@ -37,13 +37,13 @@
       it is recommended to use quotation marks (<code>''</code>) to group th
       words together, like so:</p>
 
-      <samp>
+      <div class="example">
         <pre>
           <span class="selector">h1</span> {
             <span class="property">font-family</span>: <span class="value">'Times New Roman'</span>;
           }
         </pre>
-      </samp>
+      </div>
 
       <h3>Web Safe Fonts</h3>
 
@@ -58,13 +58,13 @@
       <p>Web safe fonts are good <em>fallback fonts</em> that can be used if
       your preferred font is not available.</p>
 
-      <samp>
+      <div class="example">
         <pre>
           <span class="selector">h1</span> {
             <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>;
           }
         </pre>
-      </samp>
+      </div>
 
       <p>In the example above, Georgia and Times New Roman are fallback fonts
         to Caslon. When you specify a group of fonts, you have what is known as
@@ -81,13 +81,13 @@
       values that can be added as a final fallback font if nothing else in the
       font stack is available.</p>
 
-      <samp>
+      <div class="example">
         <pre>
           <span class="selector">h1</span> {
             <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>, <span class="value">serif</span>;
           }
         </pre>
-      </samp>
+      </div>
 
       <p>In this final example, the font stack has 4 fonts. If the first 3
         fonts aren't available, the browser will use whatever serif font is
@@ -121,7 +121,7 @@
         is equal to the keyword value <code>normal</code>, and a font weight of
         <code>700</code> is equal to <code>bold</code>.</p>
 
-      <samp>
+      <div class="example">
         <pre>
           <span class="selector">.left-section</span> {
             <span class="property">font-weight</span>: <span class="value">700</span>;
@@ -131,7 +131,7 @@
             <span class="property">font-weight</span>: <span class="value">bold</span>;
           }
         </pre>
-      </samp>
+      </div>
 
       <p>In the example above, text in elements of both <code>.left-section</code>
       and <code>.right-section</code> classes will appear bold.</p>
