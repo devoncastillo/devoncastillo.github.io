@@ -1,0 +1,26 @@
+samp {
+  display: block;
+}
+
+code, pre {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.selector {
+  color: red;
+}
+
+.property {
+  color: aqua;
+}
+
+.value {
+  color: orange;
+}
