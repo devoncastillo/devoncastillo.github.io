@@ -94,7 +94,54 @@
         available on the system.</p>
     </section>
 
+    <section id="font-weight">
+      <h2>Font Weight</h2>
 
+      <p>In CSS, the <code>font-weight</code> property controls how bold or
+      thin text appears. It can be specified with keywords or numerical values.</p>
+
+      <h3>Keyword Values</h3>
+
+      <p>The <code>font-weight</code> property can take any one of these
+      keyword values:</p>
+
+      <ul>
+        <li><code>bold</code>: Bold font weight.</li>
+        <li><code>normal</code>: Normal font weight. This is the default value.</li>
+        <li><code>lighter</code>: One font weight lighter than the element's
+        parent value.</li>
+        <li><code>bolder</code>: One font weight bolder than the element's
+        parent value.</li>
+      </ul>
+
+      <h3>Numerical Values</h3>
+
+      <p>Numerical values can range from 1 (lightest) to 1000 (boldest), but it
+        is common practice to use increments of 100. A font weight of <code>400</code>
+        is equal to the keyword value <code>normal</code>, and a font weight of
+        <code>700</code> is equal to <code>bold</code>.</p>
+
+      <samp>
+        <pre>
+          .left-section {
+            font-weight: 700;
+          }
+
+          .right-section {
+            font-weight: bold;
+          }
+        </pre>
+      </samp>
+
+      <p>In the example above, text in elements of both <code>.left-section</code>
+      and <code>.right-section</code> classes will appear bold.</p>
+
+      <p>It's important to note that not all fonts can be assigned a numeric
+        font weight, and not all numeric font weights are available to all fonts.
+        It's a good practice to look up the font you are using to see which
+        <code>font-weight</code> values are available.</p>
+
+    </section>
   </body>
 
 </html>
