@@ -35,3 +35,19 @@ pre {
 .value {
   color: #ce896d;
 }
+
+.tag {
+  color: #e85d7f;
+}
+
+.comment {
+  color: #939598;
+}
+
+.attribute {
+  color: #b4d353;
+}
+
+.htmlvalue {
+  color: #ffe083;
+}
