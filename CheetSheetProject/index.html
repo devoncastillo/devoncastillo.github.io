@@ -12,8 +12,88 @@
     <!--Insert Nav UL-->
 
     <!--Insert Page Intro/Description-->
-    
+
     <!--Insert Content Sections-->
+    <section id="font-family">
+      <h2>Font Family</h2>
+
+      <p>The <code>font-family</code> property allows you to change the font of
+      an element.</p>
+  
+      <samp>
+        <pre>
+          h1 {
+            font-family: Arial;
+          }
+        </pre>
+      </samp>
+
+      <p>In the example above, the font family for all <code>&lt;h1&gt;</code>
+      heading elements have been set to Arial.</p>
+
+      <h3>Multi-Word Values</h3>
+  
+      <p>When specifying a typeface with multiple words, like Times New Roman,
+      it is recommended to use quotation marks (<code>''</code>) to group th
+      words together, like so:</p>
+
+      <samp>
+        <pre>
+          h1 {
+            font-family: 'Times New Roman';
+          }
+        </pre>
+      </samp>
+
+      <h3>Web Safe Fonts</h3>
+
+      <p>There is a selection of fonts that will appear the same across all
+        browsers and operating systems. These fonts are referred to as
+        <em>web safe fonts</em>. You can check out a complete list of web
+        safe fonts <a href="https://www.cssfontstack.com/" target="_blank">here</a>.
+      </p>
+
+      <h3>Fallback Fonts and Font Stacks</h3>
+
+      <p>Web safe fonts are good <em>fallback fonts</em> that can be used if
+      your preferred font is not available.</p>
+
+      <samp>
+        <pre>
+          h1 {
+            font-family: Caslon, Georgia, 'Times New Roman';
+          }
+        </pre>
+      </samp>
+
+      <p>In the example above, Georgia and Times New Roman are fallback fonts
+        to Caslon. When you specify a group of fonts, you have what is known as
+        a <em>font stack</em>. A font stack usually contains a list of
+        similar-looking fonts. Here, the browser will first try to use the
+        Caslon font. If that's not available, it will try to use a similar font,
+        Georgia. And if Georgia is not available, it will try to use Times New
+        Roman.</p>
+
+      <h3>Serif and Sans-Serif</h3>
+      <p>Serif fonts have extra details on the ends of each letter, as opposed
+        to Sans-Serif fonts, which do not have the extra details.</p>
+      <p><code>serif</code> and <code>sans-serif</code> are also keyword
+      values that can be added as a final fallback font if nothing else in the
+      font stack is available.</p>
+
+      <samp>
+        <pre>
+          h1 {
+            font-family: Caslon, Georgia, 'Times New Roman', serif;
+          }
+        </pre>
+      </samp>
+
+      <p>In this final example, the font stack has 4 fonts. If the first 3
+        fonts aren't available, the browser will use whatever serif font is
+        available on the system.</p>
+    </section>
+
 
   </body>
 
