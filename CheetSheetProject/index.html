@@ -13,7 +13,7 @@
 
     <!--Insert Page Intro/Description-->
 
-    <!--Insert Content Sections-->
+    <!--Content Sections-->
     <section id="font-family">
       <h2>Font Family</h2>
 
@@ -143,6 +143,71 @@
 
     </section>
 
+    <section id="font-style">
+      <h2>Font Style</h2>
+
+      <p>The <code>font-style</code> property sets whether a font should be
+      styled with a normal, italic, or oblique face from its
+      <code>font-family</code>.</p>
+
+      <p><strong>Italic</strong> font faces are generally cursive in nature,
+      usually using less horizontal space than their unstyled counterparts,
+      while <strong>oblique</strong> faces are usually just sloped versions
+      of the regular face. When the specified style is not available, both
+      italic and oblique faces are simulated by artifically sloping the glyphs
+      of the regular face.</p>
+
+      <h3>Values</h3>
+
+      <ul>
+        <li><code>normal</code>: Selects a font that is classified as
+        <code>normal</code> within a <code>font-family</code>.</li>
+        <li><code>italic</code>: Selects a font that is classified as
+        <code>italic</code>. If no italic version of the face is available,
+        one classified as <code>oblique</code> is used instead. If neither is
+        available, the style is artificially simulated.</li>
+        <li><code>oblique</code>: Selects a font that is classified as
+        <code>oblique</code>. If no oblique version of the face is available,
+        one classified as <code>italic</code> is used instead. If neither is
+        available, the style is artificially simulated.</li>
+        <li><code>oblique</code><code>&lt;angle&gt;</code>: Selects a font
+        classified as <code>oblique</code>, and additionally specifies an angle
+        for the slant of the text. Refer to
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style#values"
+        target="_blank">MDN documentation</a> for more info on using
+        this option.</li>
+      </ul>
+      
+    </section>
+
+    <section id="text-transform">
+      <h2>Text Transformation</h2>
+
+      <p>Text can also be styled to appear in either all uppercase or lowercase
+        with the <code>text-transform</code> property.
+      </p>
+
+      <div class="example">
+        <pre>
+          <span class="selector">h1</span> {
+            <span class="property">text-transform</span>: <span class="value">uppercase</span>;
+          }
+        </pre>
+      </div>
+
+      <p>The code in the example above formats all <code>&lt;h1&gt;</code>
+      elements to appear in <code>uppercase</code>, regardless of the case used
+      for the heading within the HTML code. Alternatively, the <code>lowercase</code>
+      value could be used to format text in all lowercase.</p>
+
+      <p>The other most commonly-used value for this property is
+      <code>capitalize</code>, which automatically capitalizes the first letter
+      of each word. Refer to 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
+      target="_blank">MDN Documentation</a> on this topic for a full list of
+      values.</p>
+      
+    </section>
 
   </body>
 
