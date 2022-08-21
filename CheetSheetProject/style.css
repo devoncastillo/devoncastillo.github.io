@@ -7,20 +7,20 @@ code, pre {
 }
 
 pre {
-  background-color: navy;
+  background-color: #1e1e1e;
   color: white;
   font-weight: bold;
   padding-top: 15px;
 }
 
 .selector {
-  color: red;
+  color: #ffc813;
 }
 
 .property {
-  color: aqua;
+  color: #9cdcfe;
 }
 
 .value {
-  color: orange;
+  color: #ce896d;
 }
