@@ -9,7 +9,7 @@
   <body>
     <h1>Cheat Sheet: CSS Typography</h1>
 
-    <!--Insert Nav UL-->
+    <!--Navigation Menu-->
     <nav>
       <ul>
         <li><a href="#font-family">Font Family</a></li>
@@ -44,14 +44,18 @@
     </nav>
 
     <!--Insert Page Intro/Description-->
+
+    <!--Main Content Sections-->
     <main>
-      <!--Content Sections-->
+      
+      <!--Section: Font Family-->
       <section id="font-family">
         <h2>Font Family</h2>
 
         <p>The <code>font-family</code> property allows you to change the font of
         an element.</p>
     
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -69,6 +73,7 @@
         it is recommended to use quotation marks (<code>''</code>) to group the
         words together, like so:</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -90,6 +95,7 @@
         <p>Web safe fonts are good <strong>fallback fonts</strong> that can be used if
         your preferred font is not available.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -117,6 +123,7 @@
           nothing else in the font stack is available.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -130,6 +137,7 @@
           available on the system.</p>
       </section>
 
+      <!--Section: Font Weight-->
       <section id="font-weight">
         <h2>Font Weight</h2>
 
@@ -157,6 +165,7 @@
           is equal to the keyword value <code>normal</code>, and a font weight of
           <code>700</code> is equal to <code>bold</code>.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">.left-section</span> {
@@ -179,6 +188,7 @@
 
       </section>
 
+      <!--Section: Font Style-->
       <section id="font-style">
         <h2>Font Style</h2>
 
@@ -218,6 +228,7 @@
         
       </section>
 
+      <!--Section: Text Transformation-->
       <section id="text-transform">
         <h2>Text Transformation</h2>
 
@@ -225,6 +236,7 @@
           with the <code>text-transform</code> property.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -249,6 +261,7 @@
 
       </section>
       
+      <!--Section: Text Layout-->
       <section id="text-layout">
         <h2>Text Layout</h2>
 
@@ -263,6 +276,7 @@
         property takes length values in units, such as <code>2px</code> or
         <code>0.5em</code>.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">p</span> {
@@ -283,6 +297,7 @@
         <code>word-spacing</code> property also takes length values in units,
         such as <code>3px</code> or <code>0.2em</code>.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -306,6 +321,7 @@
         unitless number, such as <code>1.2</code>, or a length value, such as
         <code>12px</code>, <code>5%</code> or <code>2em</code>.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">p</span> {
@@ -324,6 +340,7 @@
 
         <p>The <code>text-align</code> property aligns text to its parent element.</p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">h1</span> {
@@ -337,6 +354,7 @@
         this property include <code>center</code> and <code>justify</code>.</p>
       </section>
 
+      <!--Section: Web Fonts-->
       <section id="web-fonts">
         <h2>Web Fonts</h2>
 
@@ -390,6 +408,7 @@
 
         <h4>Using &lt;link&gt;:</h4>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="tag">&lt;head&gt;</span>
@@ -406,6 +425,7 @@
           ready to be used in your CSS.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">p</span> {
@@ -419,6 +439,7 @@
 
         <h4>Using @import:</h4>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="comment">/* Add the import rule to the top of your CSS stylesheet along with other at-rules */</span>
@@ -432,6 +453,7 @@
           CSS rule sets that follow.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">p</span> {
@@ -492,6 +514,7 @@
           <code>@font-face</code> ruleset.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="rule">@font-face</span> {
@@ -533,6 +556,7 @@
           font in your stylesheet.
         </p>
 
+        <!--Example Code-->
         <div class="example">
           <pre>
             <span class="selector">p</span> {
@@ -563,6 +587,8 @@
           you place your <code>@font-face</code> rules in a separate CSS
           stylesheet from your regular page styling.
         </p>
+
+        <!--Aside: Discussion on methods for incorporating web fonts-->
         <aside>
           <h3 id="discussion">Discussion | &lt;link&gt; vs. @import vs. @font-face</h3>
 
