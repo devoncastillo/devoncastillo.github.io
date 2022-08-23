@@ -10,601 +10,637 @@
     <h1>Cheat Sheet: CSS Typography</h1>
 
     <!--Insert Nav UL-->
+    <nav>
+      <ul>
+        <li><a href="#font-family">Font Family</a></li>
+        <ul>
+          <li><a href="#multi-word-values">Multi-Word Values</a></li>
+          <li><a href="#web-safe-fonts">Web Safe Fonts</a></li>
+          <li><a href="#fallback-fonts">Fallback Fonts and Font Stacks</a></li>
+          <li><a href="#font-family-keywords">Serif, Sans-Serif, and Monospace</a></li>
+        </ul>
+        <li><a href="#font-weight">Font Weight</a></li>
+        <ul>
+          <li><a href="#font-weight-keywords">Keyword Values</a></li>
+          <li><a href="#font-weight-numeric">Numerical Values</a></li>
+        </ul>
+        <li><a href="#font-style">Font Style</a></li>
+
+        <li><a href="#text-transform">Text Transformation</a></li>
+        <li><a href="#text-layout">Text Layout</a></li>
+        <ul>
+          <li><a href="#letter-spacing">Letter Spacing</a></li>
+          <li><a href="#word-spacing">Word Spacing</a></li>
+          <li><a href="#line-height">Line Height</a></li>
+          <li><a href="#text-alignment">Text Alignment</a></li>
+        </ul>
+        <li><a href="#web-fonts">Web Fonts</a></li>
+        <ul>
+          <li><a href="#using-link-import">Using &lt;link&gt; or @import</a></li>
+          <li><a href="#using-font-face">Using @font-face</a></li>
+          <li><a href="#discussion">&lt;link&gt; vs. @import vs. @font-face</a></li>
+        </ul>
+      </ul>
+    </nav>
 
     <!--Insert Page Intro/Description-->
+    <main>
+      <!--Content Sections-->
+      <section id="font-family">
+        <h2>Font Family</h2>
 
-    <!--Content Sections-->
-    <section id="font-family">
-      <h2>Font Family</h2>
-
-      <p>The <code>font-family</code> property allows you to change the font of
-      an element.</p>
-  
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-          <span class="property">font-family</span>: <span class="value">Arial</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, the font family for all <code>&lt;h1&gt;</code>
-      heading elements has been set to Arial.</p>
-
-      <h3>Multi-Word Values</h3>
-  
-      <p>When specifying a typeface with multiple words, like Times New Roman,
-      it is recommended to use quotation marks (<code>''</code>) to group the
-      words together, like so:</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-            <span class="property">font-family</span>: <span class="value">'Times New Roman'</span>;
-          }
-        </pre>
-      </div>
-
-      <h3>Web Safe Fonts</h3>
-
-      <p>There is a selection of fonts that will appear the same across all
-        browsers and operating systems. These fonts are referred to as
-        <strong>web safe fonts</strong>. You can check out a complete list of web
-        safe fonts <a href="https://www.cssfontstack.com/" target="_blank">here</a>.
-      </p>
-
-      <h3>Fallback Fonts and Font Stacks</h3>
-
-      <p>Web safe fonts are good <strong>fallback fonts</strong> that can be used if
-      your preferred font is not available.</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-            <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, Georgia and Times New Roman are fallback fonts
-        to Caslon. When you specify a group of fonts, you have what is known as
-        a <strong>font stack</strong>. A font stack usually contains a list of
-        similar-looking fonts. Here, the browser will first try to use the
-        Caslon font. If that's not available, it will try to use a similar font,
-        Georgia. And if Georgia is not available, it will try to use Times New
-        Roman.</p>
-
-      <h3>Serif, Sans-Serif, and Monospace</h3>
-      <p>Serif fonts have extra details on the ends of each letter, as opposed
-        to Sans-Serif fonts, which do not have the extra details. In Monospace
-        fonts, each character has the same fixed width, like console or bash
-        default fonts.
-      </p>
-      <p><code>serif</code>, <code>sans-serif</code>, and <code>monospace</code>
-        are also keyword values that can be added as a final fallback font if
-        nothing else in the font stack is available.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-            <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>, <span class="value">serif</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In this example, the font stack has 4 fonts. If the first 3
-        fonts aren't available, the browser will use whatever serif font is
-        available on the system.</p>
-    </section>
-
-    <section id="font-weight">
-      <h2>Font Weight</h2>
-
-      <p>In CSS, the <code>font-weight</code> property controls how bold or
-      thin text appears. It can be specified with keywords or numerical values.</p>
-
-      <h3>Keyword Values</h3>
-
-      <p>The <code>font-weight</code> property can take any one of these
-      keyword values:</p>
-
-      <ul>
-        <li><code>bold</code>: Bold font weight.</li>
-        <li><code>normal</code>: Normal font weight. This is the default value.</li>
-        <li><code>lighter</code>: One font weight lighter than the element's
-        parent value.</li>
-        <li><code>bolder</code>: One font weight bolder than the element's
-        parent value.</li>
-      </ul>
-
-      <h3>Numerical Values</h3>
-
-      <p>Numerical values can range from 1 (lightest) to 1000 (boldest), but it
-        is common practice to use increments of 100. A font weight of <code>400</code>
-        is equal to the keyword value <code>normal</code>, and a font weight of
-        <code>700</code> is equal to <code>bold</code>.</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">.left-section</span> {
-            <span class="property">font-weight</span>: <span class="value">700</span>;
-          }
-
-          <span class="selector">.right-section</span> {
-            <span class="property">font-weight</span>: <span class="value">bold</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, text in elements of both <code>.left-section</code>
-      and <code>.right-section</code> classes will appear bold.</p>
-
-      <p>It's important to note that not all fonts can be assigned a numeric
-        font weight, and not all numeric font weights are available to all fonts.
-        It's a good practice to look up the font you are using to see which
-        <code>font-weight</code> values are available.</p>
-
-    </section>
-
-    <section id="font-style">
-      <h2>Font Style</h2>
-
-      <p>The <code>font-style</code> property sets whether a font should be
-      styled with a normal, italic, or oblique face from its
-      <code>font-family</code>.</p>
-
-      <p><strong>Italic</strong> font faces are generally cursive in nature,
-      usually using less horizontal space than their unstyled counterparts,
-      while <strong>oblique</strong> faces are usually just sloped versions
-      of the regular face. When the specified style is not available, both
-      italic and oblique faces are simulated by artificially sloping the glyphs
-      of the regular face.</p>
-
-      <h3>Values</h3>
-
-      <ul>
-        <li><code>normal</code>: Selects a font that is classified as
-        <code>normal</code> within a <code>font-family</code>.</li>
-        <li><code>italic</code>: Selects a font that is classified as
-        <code>italic</code>. If no italic version of the face is available,
-        one classified as <code>oblique</code> is used instead. If neither is
-        available, the style is artificially simulated.</li>
-        <li><code>oblique</code>: Selects a font that is classified as
-        <code>oblique</code>. If no oblique version of the face is available,
-        one classified as <code>italic</code> is used instead. If neither is
-        available, the style is artificially simulated.</li>
-        <li><code>oblique</code><code>&lt;angle&gt;</code>: Selects a font
-        classified as <code>oblique</code> and additionally specifies an angle
-        for the slant of the text. Refer to
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style#values"
-        target="_blank">MDN documentation</a> for more info on using
-        this option.</li>
-      </ul>
-      
-    </section>
-
-    <section id="text-transform">
-      <h2>Text Transformation</h2>
-
-      <p>Text can also be styled to appear in either all uppercase or lowercase
-        with the <code>text-transform</code> property.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-            <span class="property">text-transform</span>: <span class="value">uppercase</span>;
-          }
-        </pre>
-      </div>
-
-      <p>The code in the example above formats all <code>&lt;h1&gt;</code>
-        elements to appear in <code>uppercase</code>, regardless of the case used
-        for the heading within the HTML code. Alternatively, the <code>lowercase</code>
-        value could be used to format text in all lowercase.
-      </p>
-
-      <p>The other most commonly-used value for this property is
-        <code>capitalize</code>, which automatically capitalizes the first letter
-        of each word. Refer to 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
-        target="_blank">MDN Documentation</a> on this topic for a full list of
-        values.
-      </p>
-
-    </section>
+        <p>The <code>font-family</code> property allows you to change the font of
+        an element.</p>
     
-    <section id="text-layout">
-      <h2>Text Layout</h2>
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+            <span class="property">font-family</span>: <span class="value">Arial</span>;
+            }
+          </pre>
+        </div>
 
-      <p>The following properties can be used to change the way text is displayed
-        or laid out within the element's container.</p>
+        <p>In the example above, the font family for all <code>&lt;h1&gt;</code>
+        heading elements has been set to Arial.</p>
 
-      <h3>Letter Spacing</h3>
-      <p>The <code>letter-spacing</code> property is used to set the horizontal
-      spacing between the individual characters in an element. It's not common
-      to set the spacing between letters, but it can sometimes help the
-      readability of certain fonts or styles. The <code>letter-spacing</code>
-      property takes length values in units, such as <code>2px</code> or
-      <code>0.5em</code>.</p>
+        <h3 id="multi-word-values">Multi-Word Values</h3>
+    
+        <p>When specifying a typeface with multiple words, like Times New Roman,
+        it is recommended to use quotation marks (<code>''</code>) to group the
+        words together, like so:</p>
 
-      <div class="example">
-        <pre>
-          <span class="selector">p</span> {
-          <span class="property">letter-spacing</span>: <span class="value">2px</span>;
-          }
-        </pre>
-      </div>
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+              <span class="property">font-family</span>: <span class="value">'Times New Roman'</span>;
+            }
+          </pre>
+        </div>
 
-      <p>In the example above, each character in the paragraph element will be
-        separated by 2 pixels.
-      </p>
+        <h3 id="web-safe-fonts">Web Safe Fonts</h3>
 
-      <h3>Word Spacing</h3>
-
-      <p>You can set the space between words with the <code>word-spacing</code>
-      property. It's also not common to increase the spacing between words, but
-      it may help enhance the readability of bolded or enlarged text. The
-      <code>word-spacing</code> property also takes length values in units,
-      such as <code>3px</code> or <code>0.2em</code>.</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-          <span class="property">word-spacing</span>: <span class="value">0.3em</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, the word spacing is set to <code>0.3em</code>.
-      For word spacing, using <code>em</code> values are recommended because the
-      spacing can be set based on the size of the font.</p>
-
-      <h3>Line Height</h3>
-
-      <img id="line-height" src="/CheetSheetProject/images/htmlcss1-diagram__leading_updated_1-01.svg"
-      alt="A figure depicting how line height is calculated as a combination of font
-      size plus the leading space between lines.">
-
-      <p>We can use the <code>line-height</code> property to set how tall we
-      want each line containing our text to be. Line height values can be a
-      unitless number, such as <code>1.2</code>, or a length value, such as
-      <code>12px</code>, <code>5%</code> or <code>2em</code>.</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">p</span> {
-          <span class="property">line-height</span>: <span class="value">1.4</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, the height between lines is set to <code>1.4</code>.
-      Generally, the unitless value is preferred since it is responsive based
-      on the current font size. In other words, if the <code>line-height</code>
-      is specified by a unitless number, changing the font size will automatically
-      readjust the line height.</p>
-
-      <h3>Text Alignment</h3>
-
-      <p>The <code>text-align</code> property aligns text to its parent element.</p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">h1</span> {
-          <span class="property">text-align</span>: <span class="value">right</span>;
-          }
-        </pre>
-      </div>
-
-      <p>In the example above, the <code>&lt;h1&gt;</code> element is aligned
-      to the right side, instead of the default <code>left</code>. Other common values for
-      this property include <code>center</code> and <code>justify</code>.</p>
-    </section>
-
-    <section id="web-fonts">
-      <h2>Web Fonts</h2>
-
-      <p>While web safe fonts are supported across browsers and operating
-        systems, the fonts you can use for your website are
-        limitless&mdash;<strong>web fonts</strong> allow you to express your unique
-        style through a multitude of different fonts found on the web.
-      </p>
-
-      <p>Free font services, like
-        <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> and
-        <a href="https://fonts.adobe.com/" target="_blank">Adobe Fonts</a>, host
-        fonts that you can link to either from your HTML document with a provided
-        <code>&lt;link&gt;</code> element or from your CSS stylesheet with a
-        provided <code>@import</code> rule statement.
-      </p>
-
-      <p>You can also use fonts from paid font distributors like
-        <a href="https://www.fonts.com/" target="_blank">fonts.com</a> by
-        downloading and hosting them with the rest of your site's files. You
-        can create a <code>@font-face</code> ruleset in your CSS
-        stylesheet to link to the relative path of the font file.
-      </p>
-
-      <p>These techniques for including web fonts into your site allow you to go
-        beyond the sometimes "traditional" appearance of web safe fonts.
-      </p>
-
-      <h3>Web Fonts Using &lt;link&gt; or @import</h3>
-
-      <p>Online font services, like
-        <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
-        make it easy to find and link to fonts from your site. You can browse
-        and select fonts that match the style of your website.
-      </p>
-
-      <!--Image placeholder-->
-
-      <p>When you select a font in Google Fonts, you'll be shown all of the
-        different styles available for that particular font. You can then
-        select the styles you want to use on your site.
-      </p>
-
-      <!--Image placeholder-->
-
-      <p>When you're done selecting a font and its styles, you can review your
-        selected font family, and choose between a <code>&lt;link&gt;</code>
-        element or <code>@import</code> rule that will be automatically
-        generated for you to use on your site.
-      </p>
-
-      <h4>Using &lt;link&gt;:</h4>
-
-      <div class="example">
-        <pre>
-          <span class="tag">&lt;head&gt;</span>
-          &nbsp;&nbsp;<span class="comment">&lt;&excl;&dash;&dash; Add the link element for Google Fonts along with other metadata &dash;&dash;&gt;</span>
-          &nbsp;&nbsp;<span class="tag">&lt;link</span>
-          <span class="attribute">href</span>=<span class="htmlvalue">"https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"</span>
-          <span class="attribute">rel</span>=<span class="htmlvalue">"stylesheet"</span><span class="tag">&gt;</span>
-          <span class="tag">&lt;&#47;head&gt;</span>
-        </pre>
-      </div>
-
-      <p>The generated <code>&lt;link&gt;</code> element needs to be added to
-        the <code>&lt;head&gt;</code> element in your HTML document for it to be
-        ready to be used in your CSS.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">p</span> {
-          <span class="property">font-family</span>: <span class="value">'Roboto'</span>, <span class="value">sans-serif</span>;
-          }
-        </pre>
-      </div>
-
-      <p>You can then create <code>font-family</code> declarations in your CSS.
-      </p>
-
-      <h4>Using @import:</h4>
-
-      <div class="example">
-        <pre>
-          <span class="comment">/* Add the import rule to the top of your CSS stylesheet along with other at-rules */</span>
-          
-          <span class="rule">@import</span> <span class="attribute">url</span>(<span class="value">//fonts.googleapis.com/css?family=Roboto</span>);</span>
-        </pre>
-      </div>
-
-      <p>The generated <code>@import</code> rule needs to be added at the top
-        of your CSS stylesheet so that it loads and is ready to use in the
-        CSS rule sets that follow.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">p</span> {
-          <span class="property">font-family</span>: <span class="value">'Roboto'</span>, <span class="value">sans-serif</span>;
-          }
-        </pre>
-      </div>
-
-      <p>You can then create <code>font-family</code> declarations in your CSS.
-      </p>
-
-      <h3>Web Fonts Using @font-face</h3>
-
-      <!--Image placeholder-->
-
-      <p>Fonts can also be added using a <code>@font-face</code>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
-        target="_blank" rel="noopener noreferrer">ruleset</a>
-        in your CSS stylesheet and is commonly used when your fonts are hosted
-        locally (i.e., you have created / licensed / purchased and downloaded the
-        font files to your web server). Although it is possible to use this method
-        for remotely-hosted font files, it is generally considered simpler to
-        utilize one of the methods noted above for such files.
-      </p>
-
-      <h4>Font File Formats</h4>
-      <p>Fonts come in a few different file formats, such as:</p>
-
-      <ul>
-        <li>OTF (OpenType Font)</li>
-        <li>TTF (TrueType Font)</li>
-        <li>WOFF (Web Open Font Format)</li>
-        <li>WOFF2 (Web Open Font Format 2)</li>
-      </ul>
-
-      <p>The different formats are a progression of standards for how fonts
-        will work with different browsers, with WOFF2 being the most progressive.
-        It's a good idea to include TTF, WOFF, and WOFF2 formats with your
-        <code>@font-face</code> rule to ensure compatibility on all browsers.
-      </p>
-
-      <h4>Using @font-face:</h4>
-
-      <!--Image placeholder-->
-
-      <p>On <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>,
-        once you have selected the desired fonts, you can use the
-        "Download" button in the "Selected Families" section to download the
-        font files to your computer. The files will be downloaded as a single
-        format, in this case, TTF. You can use a tool such as
-        <a href="https://google-webfonts-helper.herokuapp.com/fonts"
-        target="_blank" rel="noopener noreferrer">Google Web Fonts Helper</a>
-        to generate additional file types for WOFF and WOFF2.
-      </p>
-
-      <p>When you have the files you need, move them to a folder inside your
-        website's working directory, and you're ready to use them in a
-        <code>@font-face</code> ruleset.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="rule">@font-face</span> {
-          <span class="property">font-family</span>: <span class="value">'MyParagraphFont'</span>;
-          <span class="property">src</span>: <span class="attribute">url</span><span class="value">('fonts/Roboto.woff2') format('woff2')</span>,
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">url</span><span class="value">('fonts/Roboto.woff') format('woff')</span>,
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">url</span><span class="value">('fonts/Roboto.ttf') format('truetype')</span>;
-          }
-        </pre>
-      </div>
-
-      <p>Here's a line-by-line breakdown of the example above:</p>
-
-      <ul>
-        <li>The <code>@font-face</code> ruleset is used as the selector. It's
-          recommended to define the <code>@font-face</code> ruleset at the top of
-          your CSS stylesheet.
-        </li>
-        <li>Inside the declaration block, the <code>font-family</code> property
-          is used to set a custom name for the downloaded font. The name can be
-          anything you choose, but it must be surrounded by quotation marks. In
-          the example, the font is named <code>'MyParagraphFont'</code>, as this
-          font will be used for all paragraphs.
-        </li>
-        <li>The <code>src</code> property contains three values, each specifying
-          the relative path to the font file and its format. In this example,
-          the font files are stored inside a folder named <code>fonts</code>
-          within the working directory.
-        </li>
-        <li>Note that the ordering for the different formats is important because
-          our browser will start from the top of the list and search until it
-          finds a font format that it supports. Read more on format prioritization
-          on <a href="https://css-tricks.com/snippets/css/using-font-face-in-css/"
-          target="_blank" rel="noopener noreferrer">CSS-Tricks</a>.
-        </li>
-      </ul>
-
-      <p>Once the <code>@font-face</code> at-rule is defined, you can use the
-        font in your stylesheet.
-      </p>
-
-      <div class="example">
-        <pre>
-          <span class="selector">p</span> {
-          <span class="property">font-family</span>: <span class="value">'MyParagraphFont'</span>, <span class="value">sans-serif</span>;
-          }
-        </pre>
-      </div>
-
-      <p>As with the other methods, you can use the <code>font-family</code>
-        property to set the font on any HTML element. The downloaded font can
-        be referenced with the name you provided as the <code>font-family</code>
-        property's value in the <code>@font-face</code> ruleset&mdash;in this
-        case, <code>'MyParagraphFont'</code>.      
-      </p>
-
-      <h4>Multiple Weights and Styles with @font-face</h4>
-
-      <p>One important thing to note when using the <code>@font-face</code>
-        method is that you may need a separate <code>@font-face</code> rule
-        for each different weight and style of font that you intend to use.
-        This is because for most fonts, each weight and style for a given
-        font is actually defined in a separate file.
-      </p>
-
-      <p>If you are using multiple different font weights and styles on your
-        website, the amount of code required for these <code>@font-face</code>
-        rules can get quite lengthy. For this reason, some sites recommend that
-        you place your <code>@font-face</code> rules in a separate CSS
-        stylesheet from your regular page styling.
-      </p>
-      <aside>
-        <h3>Discussion | &lt;link&gt; vs. @import vs. @font-face</h3>
-
-        <p>The <code>&lt;link&gt;</code>, <code>@import</code>, and
-          <code>@font-face</code> methods are all different ways of doing the
-          same thing. In fact, both <code>&lt;link&gt;</code> and
-          <code>@import</code> methods ultimately work by linking back to and
-          loading remote stylesheets (behind the scenes) which include all the
-          <code>@font-face</code> rulesets for importing the remotely hosted
-          fonts and their various character sets (such as may be needed for
-          non-English languages). 
+        <p>There is a selection of fonts that will appear the same across all
+          browsers and operating systems. These fonts are referred to as
+          <strong>web safe fonts</strong>. You can check out a complete list of web
+          safe fonts <a href="https://www.cssfontstack.com/" target="_blank">here</a>.
         </p>
 
-        <!--Insert image of @font-face rule and character sets-->
+        <h3 id="fallback-fonts">Fallback Fonts and Font Stacks</h3>
+
+        <p>Web safe fonts are good <strong>fallback fonts</strong> that can be used if
+        your preferred font is not available.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+              <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, Georgia and Times New Roman are fallback fonts
+          to Caslon. When you specify a group of fonts, you have what is known as
+          a <strong>font stack</strong>. A font stack usually contains a list of
+          similar-looking fonts. Here, the browser will first try to use the
+          Caslon font. If that's not available, it will try to use a similar font,
+          Georgia. And if Georgia is not available, it will try to use Times New
+          Roman.</p>
+
+        <h3 id="font-family-keywords">Serif, Sans-Serif, and Monospace</h3>
+        <p>Serif fonts have extra details on the ends of each letter, as opposed
+          to Sans-Serif fonts, which do not have the extra details. In Monospace
+          fonts, each character has the same fixed width, like console or bash
+          default fonts.
+        </p>
+        <p><code>serif</code>, <code>sans-serif</code>, and <code>monospace</code>
+          are also keyword values that can be added as a final fallback font if
+          nothing else in the font stack is available.
+        </p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+              <span class="property">font-family</span>: <span class="value">Caslon</span>, <span class="value">Georgia</span>, <span class="value">'Times New Roman'</span>, <span class="value">serif</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In this example, the font stack has 4 fonts. If the first 3
+          fonts aren't available, the browser will use whatever serif font is
+          available on the system.</p>
+      </section>
+
+      <section id="font-weight">
+        <h2>Font Weight</h2>
+
+        <p>In CSS, the <code>font-weight</code> property controls how bold or
+        thin text appears. It can be specified with keywords or numerical values.</p>
+
+        <h3 id="font-weight-keywords">Keyword Values</h3>
+
+        <p>The <code>font-weight</code> property can take any one of these
+        keyword values:</p>
+
+        <ul>
+          <li><code>bold</code>: Bold font weight.</li>
+          <li><code>normal</code>: Normal font weight. This is the default value.</li>
+          <li><code>lighter</code>: One font weight lighter than the element's
+          parent value.</li>
+          <li><code>bolder</code>: One font weight bolder than the element's
+          parent value.</li>
+        </ul>
+
+        <h3 id="font-weight-numeric">Numerical Values</h3>
+
+        <p>Numerical values can range from 1 (lightest) to 1000 (boldest), but it
+          is common practice to use increments of 100. A font weight of <code>400</code>
+          is equal to the keyword value <code>normal</code>, and a font weight of
+          <code>700</code> is equal to <code>bold</code>.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">.left-section</span> {
+              <span class="property">font-weight</span>: <span class="value">700</span>;
+            }
+
+            <span class="selector">.right-section</span> {
+              <span class="property">font-weight</span>: <span class="value">bold</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, text in elements of both <code>.left-section</code>
+        and <code>.right-section</code> classes will appear bold.</p>
+
+        <p>It's important to note that not all fonts can be assigned a numeric
+          font weight, and not all numeric font weights are available to all fonts.
+          It's a good practice to look up the font you are using to see which
+          <code>font-weight</code> values are available.</p>
+
+      </section>
+
+      <section id="font-style">
+        <h2>Font Style</h2>
+
+        <p>The <code>font-style</code> property sets whether a font should be
+        styled with a normal, italic, or oblique face from its
+        <code>font-family</code>.</p>
+
+        <p><strong>Italic</strong> font faces are generally cursive in nature,
+        usually using less horizontal space than their unstyled counterparts,
+        while <strong>oblique</strong> faces are usually just sloped versions
+        of the regular face. When the specified style is not available, both
+        italic and oblique faces are simulated by artificially sloping the glyphs
+        of the regular face.</p>
+
+        <p>The <code>font-style</code> property can take any one of these
+          keyword values:
+        </p>
+
+        <ul>
+          <li><code>normal</code>: Selects a font that is classified as
+          <code>normal</code> within a <code>font-family</code>.</li>
+          <li><code>italic</code>: Selects a font that is classified as
+          <code>italic</code>. If no italic version of the face is available,
+          one classified as <code>oblique</code> is used instead. If neither is
+          available, the style is artificially simulated.</li>
+          <li><code>oblique</code>: Selects a font that is classified as
+          <code>oblique</code>. If no oblique version of the face is available,
+          one classified as <code>italic</code> is used instead. If neither is
+          available, the style is artificially simulated.</li>
+          <li><code>oblique</code><code>&lt;angle&gt;</code>: Selects a font
+          classified as <code>oblique</code> and additionally specifies an angle
+          for the slant of the text. Refer to
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style#values"
+          target="_blank">MDN documentation</a> for more info on using
+          this option.</li>
+        </ul>
         
-        <p>So how do you decide which method is the "best" for your project?
-          There is still some open debate among the coding community about the
-          pros and cons of using locally-hosted vs. remotely-hosted font files,
-          and about which of these methods ultimately results in the most
-          optimized performance for your site.
+      </section>
+
+      <section id="text-transform">
+        <h2>Text Transformation</h2>
+
+        <p>Text can also be styled to appear in either all uppercase or lowercase
+          with the <code>text-transform</code> property.
         </p>
 
-        <p>If you want to learn more about this topic, here are some resources
-          to get you started in your research:
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+              <span class="property">text-transform</span>: <span class="value">uppercase</span>;
+            }
+          </pre>
+        </div>
+
+        <p>The code in the example above formats all <code>&lt;h1&gt;</code>
+          elements to appear in <code>uppercase</code>, regardless of the case used
+          for the heading within the HTML code. Alternatively, the <code>lowercase</code>
+          value could be used to format text in all lowercase.
         </p>
 
-        <h4>On the performance optimization debate:</h4>
+        <p>The other most commonly-used value for this property is
+          <code>capitalize</code>, which automatically capitalizes the first letter
+          of each word. Refer to 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
+          target="_blank">MDN Documentation</a> on this topic for a full list of
+          values.
+        </p>
+
+      </section>
+      
+      <section id="text-layout">
+        <h2>Text Layout</h2>
+
+        <p>The following properties can be used to change the way text is displayed
+          or laid out within the element's container.</p>
+
+        <h3 id="letter-spacing">Letter Spacing</h3>
+        <p>The <code>letter-spacing</code> property is used to set the horizontal
+        spacing between the individual characters in an element. It's not common
+        to set the spacing between letters, but it can sometimes help the
+        readability of certain fonts or styles. The <code>letter-spacing</code>
+        property takes length values in units, such as <code>2px</code> or
+        <code>0.5em</code>.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">p</span> {
+            <span class="property">letter-spacing</span>: <span class="value">2px</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, each character in the paragraph element will be
+          separated by 2 pixels.
+        </p>
+
+        <h3 id="word-spacing">Word Spacing</h3>
+
+        <p>You can set the space between words with the <code>word-spacing</code>
+        property. It's also not common to increase the spacing between words, but
+        it may help enhance the readability of bolded or enlarged text. The
+        <code>word-spacing</code> property also takes length values in units,
+        such as <code>3px</code> or <code>0.2em</code>.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+            <span class="property">word-spacing</span>: <span class="value">0.3em</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, the word spacing is set to <code>0.3em</code>.
+        For word spacing, using <code>em</code> values are recommended because the
+        spacing can be set based on the size of the font.</p>
+
+        <h3 id="line-height">Line Height</h3>
+
+        <img id="line-height-img" src="/CheetSheetProject/images/htmlcss1-diagram__leading_updated_1-01.svg"
+        alt="A figure depicting how line height is calculated as a combination of font
+        size plus the leading space between lines.">
+
+        <p>We can use the <code>line-height</code> property to set how tall we
+        want each line containing our text to be. Line height values can be a
+        unitless number, such as <code>1.2</code>, or a length value, such as
+        <code>12px</code>, <code>5%</code> or <code>2em</code>.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">p</span> {
+            <span class="property">line-height</span>: <span class="value">1.4</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, the height between lines is set to <code>1.4</code>.
+        Generally, the unitless value is preferred since it is responsive based
+        on the current font size. In other words, if the <code>line-height</code>
+        is specified by a unitless number, changing the font size will automatically
+        readjust the line height.</p>
+
+        <h3 id="text-alignment">Text Alignment</h3>
+
+        <p>The <code>text-align</code> property aligns text to its parent element.</p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">h1</span> {
+            <span class="property">text-align</span>: <span class="value">right</span>;
+            }
+          </pre>
+        </div>
+
+        <p>In the example above, the <code>&lt;h1&gt;</code> element is aligned
+        to the right side, instead of the default <code>left</code>. Other common values for
+        this property include <code>center</code> and <code>justify</code>.</p>
+      </section>
+
+      <section id="web-fonts">
+        <h2>Web Fonts</h2>
+
+        <p>While web safe fonts are supported across browsers and operating
+          systems, the fonts you can use for your website are
+          limitless&mdash;<strong>web fonts</strong> allow you to express your unique
+          style through a multitude of different fonts found on the web.
+        </p>
+
+        <p>Free font services, like
+          <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> and
+          <a href="https://fonts.adobe.com/" target="_blank">Adobe Fonts</a>, host
+          fonts that you can link to either from your HTML document with a provided
+          <code>&lt;link&gt;</code> element or from your CSS stylesheet with a
+          provided <code>@import</code> rule statement.
+        </p>
+
+        <p>You can also use fonts from paid font distributors like
+          <a href="https://www.fonts.com/" target="_blank">fonts.com</a> by
+          downloading and hosting them with the rest of your site's files. You
+          can create a <code>@font-face</code> ruleset in your CSS
+          stylesheet to link to the relative path of the font file.
+        </p>
+
+        <p>These techniques for including web fonts into your site allow you to go
+          beyond the sometimes "traditional" appearance of web safe fonts.
+        </p>
+
+        <h3 id="using-link-import">Web Fonts Using &lt;link&gt; or @import</h3>
+
+        <p>Online font services, like
+          <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+          make it easy to find and link to fonts from your site. You can browse
+          and select fonts that match the style of your website.
+        </p>
+
+        <!--Image placeholder-->
+
+        <p>When you select a font in Google Fonts, you'll be shown all of the
+          different styles available for that particular font. You can then
+          select the styles you want to use on your site.
+        </p>
+
+        <!--Image placeholder-->
+
+        <p>When you're done selecting a font and its styles, you can review your
+          selected font family, and choose between a <code>&lt;link&gt;</code>
+          element or <code>@import</code> rule that will be automatically
+          generated for you to use on your site.
+        </p>
+
+        <h4>Using &lt;link&gt;:</h4>
+
+        <div class="example">
+          <pre>
+            <span class="tag">&lt;head&gt;</span>
+            &nbsp;&nbsp;<span class="comment">&lt;&excl;&dash;&dash; Add the link element for Google Fonts along with other metadata &dash;&dash;&gt;</span>
+            &nbsp;&nbsp;<span class="tag">&lt;link</span>
+            <span class="attribute">href</span>=<span class="htmlvalue">"https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"</span>
+            <span class="attribute">rel</span>=<span class="htmlvalue">"stylesheet"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;&#47;head&gt;</span>
+          </pre>
+        </div>
+
+        <p>The generated <code>&lt;link&gt;</code> element needs to be added to
+          the <code>&lt;head&gt;</code> element in your HTML document for it to be
+          ready to be used in your CSS.
+        </p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">p</span> {
+            <span class="property">font-family</span>: <span class="value">'Roboto'</span>, <span class="value">sans-serif</span>;
+            }
+          </pre>
+        </div>
+
+        <p>You can then create <code>font-family</code> declarations in your CSS.
+        </p>
+
+        <h4>Using @import:</h4>
+
+        <div class="example">
+          <pre>
+            <span class="comment">/* Add the import rule to the top of your CSS stylesheet along with other at-rules */</span>
+            
+            <span class="rule">@import</span> <span class="attribute">url</span>(<span class="value">//fonts.googleapis.com/css?family=Roboto</span>);</span>
+          </pre>
+        </div>
+
+        <p>The generated <code>@import</code> rule needs to be added at the top
+          of your CSS stylesheet so that it loads and is ready to use in the
+          CSS rule sets that follow.
+        </p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">p</span> {
+            <span class="property">font-family</span>: <span class="value">'Roboto'</span>, <span class="value">sans-serif</span>;
+            }
+          </pre>
+        </div>
+
+        <p>You can then create <code>font-family</code> declarations in your CSS.
+        </p>
+
+        <h3 id="using-font-face">Web Fonts Using @font-face</h3>
+
+        <!--Image placeholder-->
+
+        <p>Fonts can also be added using a <code>@font-face</code>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+          target="_blank" rel="noopener noreferrer">ruleset</a>
+          in your CSS stylesheet and is commonly used when your fonts are hosted
+          locally (i.e., you have created / licensed / purchased and downloaded the
+          font files to your web server). Although it is possible to use this method
+          for remotely-hosted font files, it is generally considered simpler to
+          utilize one of the methods noted above for such files.
+        </p>
+
+        <h4>Font File Formats</h4>
+        <p>Fonts come in a few different file formats, such as:</p>
+
         <ul>
-          <li>
-            "<a href="https://css-tricks.com/snippets/css/using-font-face-in-css/#aa-a-note-on-performance"
-            target="_blank"
-            rel="noopener noreferrer">How to use @font-face in CSS</a>", Chris
-            Coyier (<a href="https://css-tricks.com/"
-            target="_blank"
-            rel="noopener noreferrer">css-tricks.com</a>)
+          <li>OTF (OpenType Font)</li>
+          <li>TTF (TrueType Font)</li>
+          <li>WOFF (Web Open Font Format)</li>
+          <li>WOFF2 (Web Open Font Format 2)</li>
+        </ul>
+
+        <p>The different formats are a progression of standards for how fonts
+          will work with different browsers, with WOFF2 being the most progressive.
+          It's a good idea to include TTF, WOFF, and WOFF2 formats with your
+          <code>@font-face</code> rule to ensure compatibility on all browsers.
+        </p>
+
+        <h4>Using @font-face:</h4>
+
+        <!--Image placeholder-->
+
+        <p>On <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>,
+          once you have selected the desired fonts, you can use the
+          "Download" button in the "Selected Families" section to download the
+          font files to your computer. The files will be downloaded as a single
+          format, in this case, TTF. You can use a tool such as
+          <a href="https://google-webfonts-helper.herokuapp.com/fonts"
+          target="_blank" rel="noopener noreferrer">Google Web Fonts Helper</a>
+          to generate additional file types for WOFF and WOFF2.
+        </p>
+
+        <p>When you have the files you need, move them to a folder inside your
+          website's working directory, and you're ready to use them in a
+          <code>@font-face</code> ruleset.
+        </p>
+
+        <div class="example">
+          <pre>
+            <span class="rule">@font-face</span> {
+            <span class="property">font-family</span>: <span class="value">'MyParagraphFont'</span>;
+            <span class="property">src</span>: <span class="attribute">url</span><span class="value">('fonts/Roboto.woff2') format('woff2')</span>,
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">url</span><span class="value">('fonts/Roboto.woff') format('woff')</span>,
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">url</span><span class="value">('fonts/Roboto.ttf') format('truetype')</span>;
+            }
+          </pre>
+        </div>
+
+        <p>Here's a line-by-line breakdown of the example above:</p>
+
+        <ul>
+          <li>The <code>@font-face</code> ruleset is used as the selector. It's
+            recommended to define the <code>@font-face</code> ruleset at the top of
+            your CSS stylesheet.
           </li>
-          <li>
-            "<a href="https://fonts.google.com/knowledge/using_type/using_web_fonts#optimizing-font-loading"
-            target="_blank"
-            rel="noopener noreferrer">Using web fonts</a>", Elliot Jay Stocks
-            (<a href="https://fonts.google.com/"
-            target="_blank"
-            rel="noopener noreferrer">fonts.google.com</a>)
+          <li>Inside the declaration block, the <code>font-family</code> property
+            is used to set a custom name for the downloaded font. The name can be
+            anything you choose, but it must be surrounded by quotation marks. In
+            the example, the font is named <code>'MyParagraphFont'</code>, as this
+            font will be used for all paragraphs.
+          </li>
+          <li>The <code>src</code> property contains three values, each specifying
+            the relative path to the font file and its format. In this example,
+            the font files are stored inside a folder named <code>fonts</code>
+            within the working directory.
+          </li>
+          <li>Note that the ordering for the different formats is important because
+            our browser will start from the top of the list and search until it
+            finds a font format that it supports. Read more on format prioritization
+            on <a href="https://css-tricks.com/snippets/css/using-font-face-in-css/"
+            target="_blank" rel="noopener noreferrer">CSS-Tricks</a>.
           </li>
         </ul>
-        <h4>General Reference</h4>
-        <ul>
-          <li>
-            <a href="https://www.w3schools.com/css/css3_fonts.asp"
-            target="_blank"
-            rel="noopener noreferrer">CSS Web Fonts</a>
-            (<a href="https://www.w3schools.com/"
-            target="_blank"
-            rel="noopener noreferrer">W3 Schools</a>)
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
-            target="_blank"
-            rel="noopener noreferrer">MDN Web Docs | @font-face</a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"
-            target="_blank"
-            rel="noopener noreferrer">MDN Web Docs | &lt;link&gt;</a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import"
-            target="_blank"
-            rel="noopener noreferrer">MDN Web Docs | @import</a>
-          </li>
-        </ul>
+
+        <p>Once the <code>@font-face</code> at-rule is defined, you can use the
+          font in your stylesheet.
+        </p>
+
+        <div class="example">
+          <pre>
+            <span class="selector">p</span> {
+            <span class="property">font-family</span>: <span class="value">'MyParagraphFont'</span>, <span class="value">sans-serif</span>;
+            }
+          </pre>
+        </div>
+
+        <p>As with the other methods, you can use the <code>font-family</code>
+          property to set the font on any HTML element. The downloaded font can
+          be referenced with the name you provided as the <code>font-family</code>
+          property's value in the <code>@font-face</code> ruleset&mdash;in this
+          case, <code>'MyParagraphFont'</code>.      
+        </p>
+
+        <h4>Multiple Weights and Styles with @font-face</h4>
+
+        <p>One important thing to note when using the <code>@font-face</code>
+          method is that you may need a separate <code>@font-face</code> rule
+          for each different weight and style of font that you intend to use.
+          This is because for most fonts, each weight and style for a given
+          font is actually defined in a separate file.
+        </p>
+
+        <p>If you are using multiple different font weights and styles on your
+          website, the amount of code required for these <code>@font-face</code>
+          rules can get quite lengthy. For this reason, some sites recommend that
+          you place your <code>@font-face</code> rules in a separate CSS
+          stylesheet from your regular page styling.
+        </p>
+        <aside>
+          <h3 id="discussion">Discussion | &lt;link&gt; vs. @import vs. @font-face</h3>
+
+          <p>The <code>&lt;link&gt;</code>, <code>@import</code>, and
+            <code>@font-face</code> methods are all different ways of doing the
+            same thing. In fact, both <code>&lt;link&gt;</code> and
+            <code>@import</code> methods ultimately work by linking back to and
+            loading remote stylesheets (behind the scenes) which include all the
+            <code>@font-face</code> rulesets for importing the remotely hosted
+            fonts and their various character sets (such as may be needed for
+            non-English languages). 
+          </p>
+
+          <!--Insert image of @font-face rule and character sets-->
+          
+          <p>So how do you decide which method is the "best" for your project?
+            There is still some open debate among the coding community about the
+            pros and cons of using locally-hosted vs. remotely-hosted font files,
+            and about which of these methods ultimately results in the most
+            optimized performance for your site.
+          </p>
+
+          <p>If you want to learn more about this topic, here are some resources
+            to get you started in your research:
+          </p>
+
+          <h4>On the performance optimization debate:</h4>
+          <ul>
+            <li>
+              "<a href="https://css-tricks.com/snippets/css/using-font-face-in-css/#aa-a-note-on-performance"
+              target="_blank"
+              rel="noopener noreferrer">How to use @font-face in CSS</a>", Chris
+              Coyier (<a href="https://css-tricks.com/"
+              target="_blank"
+              rel="noopener noreferrer">css-tricks.com</a>)
+            </li>
+            <li>
+              "<a href="https://fonts.google.com/knowledge/using_type/using_web_fonts#optimizing-font-loading"
+              target="_blank"
+              rel="noopener noreferrer">Using web fonts</a>", Elliot Jay Stocks
+              (<a href="https://fonts.google.com/"
+              target="_blank"
+              rel="noopener noreferrer">fonts.google.com</a>)
+            </li>
+          </ul>
+          <h4>General Reference</h4>
+          <ul>
+            <li>
+              <a href="https://www.w3schools.com/css/css3_fonts.asp"
+              target="_blank"
+              rel="noopener noreferrer">CSS Web Fonts</a>
+              (<a href="https://www.w3schools.com/"
+              target="_blank"
+              rel="noopener noreferrer">W3 Schools</a>)
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+              target="_blank"
+              rel="noopener noreferrer">MDN Web Docs | @font-face</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"
+              target="_blank"
+              rel="noopener noreferrer">MDN Web Docs | &lt;link&gt;</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import"
+              target="_blank"
+              rel="noopener noreferrer">MDN Web Docs | @import</a>
+            </li>
+          </ul>
 
 
-      </aside>
+        </aside>
 
-    </section>
+      </section>
+
+    </main>
 
   </body>
 
