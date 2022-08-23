@@ -1,8 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap');
 
 body {
   font-size: 1em;
+}
+
+nav {
+  border: black 4px solid;
+  width: 340px;
+}
+
+nav ul {
+  padding-left: 24px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
@@ -10,7 +33,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-p {
+p, li{
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -72,6 +95,6 @@ pre {
   color: #ffe083;
 }
 
-#line-height {
+#line-height-img {
   height: 17rem;
 }
