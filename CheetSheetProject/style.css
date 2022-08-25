@@ -125,3 +125,20 @@ img {
 #line-height-img {
   height: 17rem;
 }
+
+/* Responsive Styling */
+
+@media screen and (max-width: 875px) {
+  nav {
+    display: block;
+    position: static;
+  }
+
+  h1 {
+    position: static;
+  }
+
+  main {
+    position: static;
+  }
+}
