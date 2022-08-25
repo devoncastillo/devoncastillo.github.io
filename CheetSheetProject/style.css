@@ -10,6 +10,12 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
+h1 {
+  position: absolute;
+  left: 425px;
+  font-size: 40px;
+}
+
 p, li{
   font-family: 'Open Sans', sans-serif;
 }
@@ -19,6 +25,10 @@ p, li{
 nav {
   border: black 4px solid;
   width: 340px;
+  position: fixed;
+  top: 125px;
+  left: 40px;
+  display: inline-block;
 }
 
 nav ul {
@@ -37,6 +47,12 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+main {
+  position: absolute;
+  top: 125px;
+  left: 425px;
 }
 
 /* Styling for Code Examples */
