@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap');
 
 body {
+  background-color: #e6e4df;
   font-size: 1em;
 }
 
 h1, h2, h3, h4 {
+  color: rgb(70, 85, 102);
   font-family: Ubuntu, sans-serif;
   font-weight: 500;
 }
@@ -23,7 +25,8 @@ p, li{
 /* Styling for Nav Menu */
 
 nav {
-  border: black 4px solid;
+  border: rgb(70, 85, 102) 4px solid;
+  background-color: rgb(208, 197, 197);
   width: 340px;
   position: fixed;
   top: 125px;
@@ -62,8 +65,8 @@ code, pre {
 }
 
 code {
-  color: #15141f;
-  background-color: #eae9ed;
+  color: #000;
+  background-color: rgb(182, 180, 178);
   border-radius: 0.125rem;
   margin: 0 0.0625rem;
   padding: 0 0.25rem;
