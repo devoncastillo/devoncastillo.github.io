@@ -4,6 +4,7 @@
 body {
   background-color: #e6e4df;
   font-size: 1em;
+  padding-left: 30px;
 }
 
 h1, h2, h3, h4 {
@@ -26,6 +27,7 @@ p, li{
 
 nav {
   border: rgb(70, 85, 102) 4px solid;
+  border-radius: 6px;
   background-color: rgb(208, 197, 197);
   width: 340px;
   position: fixed;
@@ -56,6 +58,7 @@ main {
   position: absolute;
   top: 125px;
   left: 425px;
+  padding-right: 25px;
 }
 
 /* Styling for Code Examples */
